@@ -1,0 +1,26 @@
+<h1>Welcome {{user.firstName}}</h1>
+<h4>Your Stories</h4>
+<table class="striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each story}}
+        <tr style="text-transform:capitalize;">
+            <td><a href="/stories/show/{{id}}">{{title}}</a></td>
+            <td>{{formatDate date 'MMMM do YYYY'}}</td>
+            <td>{{status}}</td>
+            <td>
+                <a href="/stories/edit/{{id}}" class="btn waves-effect waves-light">Edit</a>
+                <form class="delete-form" action="/stories/{{_id}}?_method=DELETE" method="POST">
+                    <button type="submit" class="btn waves-effect waves-light red">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

@@ -1,0 +1,22 @@
+<div class="row">
+    {{#each stories}}
+    <div class="col s12 m4">
+        <div class="card hoverable">
+            <div class="card-content">
+                <div class="story-title card-title">{{title}}</div>
+                <p class="story-text">{{stripTags (truncate body 200)}} <a href="/stories/show/{{id}}"> show more</a>
+                </p>
+                <br>
+                {{!-- <a href="/">
+                    <div style="overflow: hidden; word-wrap:break-word;" class="chip">
+                        <img src="{{user.image}}" alt="img">
+                        {{user.firstName}} {{user.lastName}}
+                    </div>
+                </a> --}}
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <p>No stories found</p>
+    {{/each}}
+</div>
