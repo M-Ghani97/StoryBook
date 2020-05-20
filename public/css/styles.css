@@ -44,8 +44,8 @@ footer {
 .story-title {
   text-transform: capitalize;
   /* font-weight: 300; */
-  white-space: nowrap;
-  overflow: hidden;
+/*   white-space: nowrap;
+  overflow: hidden; */
 }
 
 .story-text {
