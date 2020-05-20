@@ -26,7 +26,8 @@
         {{#each story.comments}}
         <div class="card">
             <div class="card-content">
-                <h5>{{commentBody}}</h5>
+                <p>{{commentBody}}</p>
+                <hr>
                 <div style="overflow: hidden; word-wrap:break-word;" class="chip">
                     <img src="{{commentUser.image}}" alt="img">
                     {{commentUser.firstName}} {{commentUser.lastName}}
